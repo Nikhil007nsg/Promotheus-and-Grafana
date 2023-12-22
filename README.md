@@ -82,7 +82,7 @@ kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup
 Now Grafana Dashboard look like this
 
 
-![Screenshot from 2023-12-22 14-56-39](https://github.com/Nikhil007nsg/Promotheus-and-Grafana/assets/124648723/1e9e9e17-0bef-4417-8a6d-aef669a94327)
+
 
 
 
