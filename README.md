@@ -78,45 +78,11 @@ be created successfully.
 
 ```shell
 kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup
-```
+`
+Now Grafana Dashboard look like this
 
-### minikube
 
-To try out this stack, start [minikube](https://github.com/kubernetes/minikube) with the following command:
+![Screenshot from 2023-12-22 14-56-39](https://github.com/Nikhil007nsg/Promotheus-and-Grafana/assets/124648723/1e9e9e17-0bef-4417-8a6d-aef669a94327)
 
-```shell
-$ minikube delete && minikube start --kubernetes-version=v1.23.0 --memory=6g --bootstrapper=kubeadm --extra-config=kubelet.authentication-token-webhook=true --extra-config=kubelet.authorization-mode=Webhook --extra-config=scheduler.bind-address=0.0.0.0 --extra-config=controller-manager.bind-address=0.0.0.0
-```
 
-The kube-prometheus stack includes a resource metrics API server, so the metrics-server addon is not necessary. Ensure the metrics-server addon is disabled on minikube:
 
-```shell
-$ minikube addons disable metrics-server
-```
-
-## Getting started
-
-Before deploying kube-prometheus in a production environment, read:
-
-1. [Customizing kube-prometheus](docs/customizing.md)
-2. [Customization examples](docs/customizations)
-3. [Accessing Graphical User Interfaces](docs/access-ui.md)
-4. [Troubleshooting kube-prometheus](docs/troubleshooting.md)
-
-## Documentation
-
-1. [Continuous Delivery](examples/continuous-delivery)
-2. [Update to new version](docs/update.md)
-3. For more documentation on the project refer to `docs/` directory.
-
-## Contributing
-
-To contribute to kube-prometheus, refer to [Contributing](CONTRIBUTING.md).
-
-## Join the discussion
-
-If you have any questions or feedback regarding kube-prometheus, join the [kube-prometheus discussion](https://github.com/prometheus-operator/kube-prometheus/discussions). Alternatively, consider joining [the kubernetes slack #prometheus-operator channel](http://slack.k8s.io/) or project's bi-weekly [Contributor Office Hours](https://docs.google.com/document/d/1-fjJmzrwRpKmSPHtXN5u6VZnn39M28KqyQGBEJsqUOk/edit#).
-
-## License
-
-Apache License 2.0, see [LICENSE](https://github.com/prometheus-operator/kube-prometheus/blob/main/LICENSE).
