@@ -79,7 +79,6 @@ be created successfully.
 ```shell
 kubectl delete --ignore-not-found=true -f manifests/ -f manifests/setup
 `
-Now Grafana Dashboard look like this
 
 
 
